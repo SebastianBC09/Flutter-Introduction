@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => const HomePage(),
-        '/Alert Page': (BuildContext context) => const AlertPage(),
-        '/Avatar Page': (BuildContext context) => const AvatarPage(),
+        'alert': (BuildContext context) => const AlertPage(),
+        'avatar': (BuildContext context) => const AvatarPage(),
       },
     );
   }
