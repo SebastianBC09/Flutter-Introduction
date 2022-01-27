@@ -10,6 +10,12 @@ class AlertPage extends StatelessWidget {
         title: const Text('Alert Page'),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }
