@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:componentes/src/pages/home_page.dart';
+import 'package:componentes/src/routes/routes.dart';
 import 'package:componentes/src/pages/alert_page.dart';
-import 'package:componentes/src/pages/avatar_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,10 +12,11 @@ class MyApp extends StatelessWidget {
       title: 'Componentes App',
       // home: HomePage(),
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => const HomePage(),
-        'alert': (BuildContext context) => const AlertPage(),
-        'avatar': (BuildContext context) => const AvatarPage(),
+      routes: getApplicationsRoutes(),
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AlertPage(),
+        );
       },
     );
   }
