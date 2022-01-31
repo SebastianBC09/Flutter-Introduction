@@ -14,6 +14,10 @@ class CardPage extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         children: [
           _cardType1(),
+          const SizedBox(
+            height: 30.0,
+          ),
+          _cardType2(),
         ],
       ),
     );
@@ -41,6 +45,32 @@ class CardPage extends StatelessWidget {
                 child: const Text('Ok'),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  _cardType2() {
+    return Card(
+      child: Column(
+        children: [
+          const FadeInImage(
+            image: NetworkImage(
+                'https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180522150455/lake-baikal-summer.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 300),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+          // const Image(
+          //   image: NetworkImage(
+          //       'https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180522150455/lake-baikal-summer.jpg'),
+          // ),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            child: const Text(
+                'Nota: Debido a políticas de Udemy, este curso no se puede actualizar porque es un curso gratis de más de dos horas'),
           ),
         ],
       ),
